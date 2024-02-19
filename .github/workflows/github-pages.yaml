@@ -1,0 +1,48 @@
+name: CI
+on:
+  workflow_dispatch:
+    inputs:
+      trigger:
+        description: Type m to triggre manual jobs
+        required: false
+        default: ''
+  pull_request:
+  push:
+    #branches: [ master, vuepress ]
+    #paths:
+    #- '*.md'
+    #- '*.adoc'
+    #- '*.js*'
+env:
+  NODE_VERSION: 19.7.0
+permissions:
+  contents: write
+jobs:
+  github-pages:
+    #See: https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#functions
+    #if: startsWith(github.event.inputs.trigger, 'm')
+    #     || startsWith(github.event.inputs.trigger, 'M')
+    if: github.event.inputs.trigger == ''
+      || !startsWith(github.event.inputs.trigger, 'm')
+      || !startsWith(github.event.inputs.trigger, 'M')
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - uses: actions/cache@v3
+      id: cache
+      with:
+        path: |
+          ~/.n*
+        key: ${{ runner.os }}-${{ hashFiles('**/package.json', '**/package-lock.json') }}
+    - run: npm i -E
+    - run: npm run github-pages
+    - name: Deploy 🚀 GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: dist # The folder the action should deploy.
+        clean: true # delete files that no longer exist in source.

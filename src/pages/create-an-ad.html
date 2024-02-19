@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create An Ad</title>
+    <link
+      rel="shortcut icon"
+      href="../../src/assets/images/Icon/logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="flex justify-between md:px-32 sm:px-14 px-4 items-start relative z-50"
+    >
+      <div class="flex gap-x-6 !items-center sm:mt-5 my-5">
+        <!-- Language -->
+        <div class="w-[135px]">
+          <div
+            class="relative flex justify-between cursor-pointer language-head p-2"
+          >
+            <div class="bg-white flex items-center gap-1 justify-between">
+              <img
+                class="selected-img w-6"
+                src="../../src/assets/images/Icon/language.svg"
+                alt="language"
+              />
+              <span class="selected-text text-sm font-medium sm:block hidden"
+                >Русский</span
+              >
+              <span
+                class="selected-text-short text-sm font-medium sm:hidden block"
+                >Ру</span
+              >
+            </div>
+            <img
+              src="../../src/assets/images/Icon/chevron-down.svg"
+              alt="chevron-down"
+            />
+            <div
+              class="language-dropdown absolute z-50 bg-white border border-gray-300 rounded-md mt-8 left-2 py-2 px-4 w-48"
+            >
+              <div class="language-box flex gap-x-2 p-3">
+                <img
+                  class="w-6"
+                  src="../../src/assets/images/Icon/language.svg"
+                  alt="language"
+                />
+                <span
+                  class="change-language text-sm font-medium sm:block hidden"
+                  >Русский</span
+                >
+                <span class="text-sm font-medium sm:hidden block">Ру</span>
+              </div>
+
+              <div class="language-box flex gap-x-2 p-3">
+                <img
+                  class="w-6"
+                  src="../../src/assets/images/Icon/language2.svg"
+                  alt="language"
+                />
+                <span
+                  class="change-language text-sm font-medium sm:block hidden"
+                  >O'zbekcha</span
+                >
+                <span class="text-sm font-medium sm:hidden block">O'z</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call Phone -->
+        <div class="">
+          <a href="+998 88 500 50 00" class="sm:flex gap-x-1 hidden">
+            <img src="../../src/assets/images/Icon/phone.svg" alt="phone" />
+            <p class="text-sm font-medium">+998 88 500 50 00</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div
+        class="sm:px-4 sm:py-3.5 px-3 py-3 rounded-b-[20px] absolute left-[42%] bg-white backdrop-blur"
+      >
+        <img
+          class="sm:w-full w-[92px]"
+          src="../../src/assets/images/Icon/logo.png"
+          alt="logo"
+        />
+      </div>
+
+      <!-- Login -->
+      <div class="sm:mt-5 mt-4">
+        <ul class="flex items-center sm:gap-x-4 gap-x-3">
+          <li class="cursor-pointer">
+            <a class="flex gap-2 items-center" href=""
+              ><img
+                class="p-1.5 sm:p-0 bg-gray-grey1 sm:bg-white rounded-lg"
+                src="../../src/assets/images/Icon/heart.svg"
+                alt="heart"
+              />
+              <p class="text-sm font-semibold md:block hidden">Избранные</p></a
+            >
+          </li>
+
+          <li class="sm:block hidden">
+            <div class="w-px h-8 bg-gray-grey1"></div>
+          </li>
+
+          <li
+            class="cursor-pointer sm:px-6 sm:py-2.5 px-1.5 py-1.5 rounded-lg bg-gray-grey4"
+          >
+            <a class="flex gap-2" href="">
+              <p class="text-sm font-semibold md:block hidden">Войти</p>
+              <img
+                class="bg-gray-grey1 sm:bg-white rounded-lg"
+                src="../../src/assets/images/Icon/login.svg"
+                alt="login"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class=" bg-gray-grey1">
+      <section class="px-32">
+        <!-- Navigation -->
+        <div class="flex items-center rounded-full text-sm py-8 gap-1.5">
+          <p>Главная</p>
+          <div class="w-1 h-1 bg-gray-400 rounded-full"></div>
+          <p class="">Профиль</p>
+          <div class="w-1 h-1 rounded-full bg-gray-400"></div>
+          <p class="text-gray-500">Создать объявления</p>
+        </div>
+
+        <!-- Create Ads -->
+        <div class="flex flex-col items-center">
+          <div class="px-[201px]">
+            <h1 class="text-[32px] font-bold">Создать объявления</h1>
+
+            <!-- Contact Info -->
+            <div class="p-5 bg-white mt-6 rounded-xl">
+              <h3 class="text-xl font-bold">Котактная информация</h3>
+              <form class="mt-4" action="">
+                <label
+                  class="text-sm font-medium text-gray-grey3 flex flex-col"
+                  for=""
+                >
+                  Ф.И.О.
+                  <input
+                    class="text-sm font-normal p-3 rounded-lg bg-gray-grey1 mt-2"
+                    type="text"
+                    placeholder="Шохрух Шавкиев Уктамович"
+                  />
+                </label>
+                <div class="flex gap-x-5 mt-5 w-full">
+                  <label
+                    class="text-sm font-medium text-gray-grey3 flex flex-col w-2/4"
+                    for=""
+                  >
+                    Номер телефона
+                    <input
+                      class="text-sm font-normal p-3 rounded-lg bg-gray-grey1 mt-2"
+                      type="text"
+                      placeholder="+998 99 400 00 00"
+                    />
+                  </label>
+                  <label
+                    class="text-sm font-medium text-gray-grey3 flex flex-col w-2/4"
+                    for=""
+                  >
+                    Адресс
+                    <input
+                      class="text-sm font-normal p-3 rounded-lg bg-gray-grey1 mt-2"
+                      type="text"
+                      placeholder="8897+PMP, Almachi Street, Тоshkent, Узбекистан"
+                    />
+                  </label>
+                </div>
+              </form>
+            </div>
+            <!-- Product Info -->
+            <div class="p-5 bg-white mt-6 rounded-xl">
+              <h3 class="text-xl font-bold">Данные продукта</h3>
+              <form class="mt-4" action="">
+                <div
+                  class="text-sm inline-flex rounded-xl bg-gray-grey5 p-1 mb-5"
+                >
+                  <button
+                    class="text-black-black1 px-[69px] py-1.5 bg-white rounded-lg"
+                  >
+                    Русский
+                  </button>
+                  <button class="text-gray-grey3 px-[69px] py-1.5">
+                    English
+                  </button>
+                </div>
+                <label
+                  class="text-sm font-medium text-gray-grey3 flex flex-col"
+                  for=""
+                >
+                  Название продукта
+                  <input
+                    class="text-sm font-normal p-3 rounded-lg bg-gray-grey1 mt-2"
+                    type="text"
+                    placeholder="Шохрух Шавкиев Уктамович"
+                  />
+                </label>
+                <label
+                  class="text-sm font-medium text-gray-grey3 flex flex-col w-full mt-5"
+                  for=""
+                >
+                  Описание
+                  <textarea
+                    class="text-sm font-normal p-3 rounded-lg bg-gray-grey1 mt-2"
+                    placeholder="Введите описание"
+                    rows="3"
+                  ></textarea>
+                </label>
+              </form>
+            </div>
+
+            <!--Detail Product  -->
+            <div class="p-5 bg-white mt-6 rounded-xl">
+              <h3 class="text-2xl font-bold">Детали продукта</h3>
+              <div class="relative mt-4">
+                <label class="text-sm font-medium text-gray-grey3" for="">
+                  Категория
+                  <select
+                    class="block appearance-none w-full bg-gray-grey1 p-3 pr-8 mt-2 font-normal text-black-black1 rounded-lg leading-tight focus:outline-none"
+                  >
+                    <option>Выберите категорию</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+
+                  <div
+                    class="pointer-events-none absolute z-30 top-[52%] right-0 flex items-center px-2"
+                  >
+                    <img
+                      src="../../public/images/Icon/chevron-down-gray.svg"
+                      alt="chevron-down"
+                    />
+                  </div>
+                </label>
+              </div>
+              <div class="h-px w-full bg-gray-grey4 my-5"></div>
+              <div class="relative mt-4">
+                <label
+                  class="text-sm font-medium text-gray-grey3 flex flex-col"
+                  for=""
+                >
+                  Цена
+                  <input
+                    class="text-sm font-normal p-3 outline-none rounded-lg bg-gray-grey1 mt-2"
+                    type="text"
+                    placeholder="Введите сумму"
+                  />
+                  <div
+                    class="absolute right-1 top-[47%] bg-backgroundCol2 rounded-md"
+                  >
+                    <select
+                      class="flex appearance-none w-full bg-gray-grey1 py-2 pl-2.5 pr-8 font-semibold text-black-black1 rounded-lg leading-tight focus:outline-none"
+                    >
+                      <option>UZS</option>
+                      <option>Руб</option>
+                    </select>
+
+                    <div
+                      class="pointer-events-none absolute z-30 top-1 -right-1 flex items-center px-2"
+                    >
+                      <img
+                        src="../../public/images/Icon/chevron-down-gray.svg"
+                        alt="chevron-down"
+                      />
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Foto -->
+            <div class="p-5 bg-white mt-6 rounded-xl">
+              <h3 class="text-xl font-bold">Фото</h3>
+              <p class="text-xs text-gray-grey6 mt-1">
+                Первое фото будет на обложке объявления. Перетащите, чтобы
+                изменить порядок.
+              </p>
+              <div class="mt-4 grid grid-cols-3 gap-5">
+                <div class="relative border border-gray-grey4 rounded-xl">
+                  <img
+                    class="z-0 rounded-xl w-full object-cover"
+                    src="../../public/images/Img/car1.jpg"
+                    alt="car"
+                  />
+                  <div class="flex gap-2 absolute top-3 right-3">
+                    <img
+                      src="../../public/images/Icon/burger-menu.svg"
+                      alt="burger-menu"
+                    />
+                    <img
+                      src="../../public/images/Icon/trash-button.svg"
+                      alt="trash"
+                    />
+                  </div>
+                </div>
+                <div class="relative border border-gray-grey4 rounded-xl">
+                  <img
+                    class="z-0 rounded-xl w-full object-cover"
+                    src="../../public/images/Img/car2.jpg"
+                    alt="car"
+                  />
+                  <div class="flex gap-2 absolute top-3 right-3">
+                    <img
+                      src="../../public/images/Icon/burger-menu.svg"
+                      alt="burger-menu"
+                    />
+                    <img
+                      src="../../public/images/Icon/trash-button.svg"
+                      alt="trash"
+                    />
+                  </div>
+                </div>
+                <div class="relative border border-gray-grey4 rounded-xl">
+                  <img
+                    class="z-0 rounded-xl w-full object-cover"
+                    src="../../public/images/Img/car3.jpg"
+                    alt="car"
+                  />
+                  <div class="flex gap-2 absolute top-3 right-3">
+                    <img
+                      src="../../public/images/Icon/burger-menu.svg"
+                      alt="burger-menu"
+                    />
+                    <img
+                      src="../../public/images/Icon/trash-button.svg"
+                      alt="trash"
+                    />
+                  </div>
+                </div>
+                <div class="relative border border-gray-grey4 rounded-xl">
+                  <img
+                    class="z-0 rounded-xl w-full object-cover"
+                    src="../../public/images/Img/car4.jpg"
+                    alt="car"
+                  />
+                  <div class="flex gap-2 absolute top-3 right-3">
+                    <img
+                      src="../../public/images/Icon/burger-menu.svg"
+                      alt="burger-menu"
+                    />
+                    <img
+                      src="../../public/images/Icon/trash-button.svg"
+                      alt="trash"
+                    />
+                  </div>
+                </div>
+                <div class="relative px-4 flex flex-col items-center justify-center text-center bg-gray-grey1 border border-dashed border-gray-grey4 rounded-xl">
+                  <img class="" src="../../public/images/Icon/image-add.svg" alt="add">
+                  <h3 class="text-sm font-semibold mt-3">Перетащите изображение сюда</h3>
+                  <p class="text-xs mt-2">Перетащите свое изображение сюда или <a>выберите</a></p>
+                </div>
+                <div class="relative px-4 flex flex-col items-center justify-center text-center bg-gray-grey1 border border-dashed border-gray-grey4 rounded-xl">
+                  <img class="" src="../../public/images/Icon/image-add.svg" alt="add">
+                  <h3 class="text-sm font-semibold mt-3">Перетащите изображение сюда</h3>
+                  <p class="text-xs mt-2">Перетащите свое изображение сюда или <a>выберите</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="p-4 bg-white mt-6 rounded-xl flex items-center justify-between gap-x-8 mb-36">
+              <div class="flex items-center gap-x-2.5">
+                <input type="checkbox">
+                <p class="text-sm font-medium pr-9">Даю свое согласие правилами пользования и обработки моих данных</p>
+              </div>
+              <div class="flex items-center gap-x-4">
+                <button class="text-sm font-semibold py-2.5 px-6 bg-gray-grey4 rounded-lg">Отменить</button>
+                <button class="text-sm text-white font-semibold py-2.5 px-6 bg-blue-mainBlue rounded-lg">Опубликовать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer  -->
+    <footer class="w-full flex flex-col justify-center items-center px-4">
+      <div class="border-b border-gray-300 w-full">
+        <div
+          class="bg-footerImg bg-cover bg-center flex justify-center flex-col items-center text-center"
+        >
+          <p class="mt-[63px] sm:text-base text-sm sm:w-7/12 w-11/12">
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <div
+            class="mt-6 flex justify-center flex-wrap gap-x-14 gap-y-4 pb-10 sm:text-xl text-sm"
+          >
+            <div class="flex items-center gap-1">
+              <img src="../../src/assets/images/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">Доска объявлений</h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="../../src/assets/images/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">Условия пользования</h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="../../src/assets/images/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">+998 88 500 50 00</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between sm:px-32 px-4 w-full py-2">
+        <div class="flex items-center gap-2.5">
+          <a href="#!">© 77.uz</a>
+          <p>2023. Все права защищены</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="../../src/assets/images/Icon/uic.svg" alt="uic" />
+          <img
+            class="sm:block hidden"
+            src="../../src/assets/images/Icon/group.svg"
+            alt="group"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/info-product.js"></script>
+    <script src="../js/create-an-ad.js"></script>
+  </body>
+</html>

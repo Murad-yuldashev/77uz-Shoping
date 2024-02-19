@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/images/Icon/logo.svg"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/styles/main.css" />
+    <title>77uz Shoping</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="flex justify-between md:px-32 sm:px-14 px-4 items-start relative z-50"
+    >
+      <div class="flex gap-x-6 !items-center sm:mt-5 mt-4">
+        <!-- Language -->
+        <div class="lg:w-[135px] w-[85px]">
+          <div
+            class="relative flex justify-between cursor-pointer language-head p-2"
+          >
+            <div class="bg-white flex items-center gap-1 justify-between">
+              <img
+                class="selected-img w-6 h-6"
+                src="./src/assets/images/Icon/language.svg"
+                alt="language"
+              />
+              <span
+                class="selected-text sm:text-sm text-xs font-medium lg:block hidden"
+                >Русский</span
+              >
+              <span
+                class="selected-text-short text-sm font-medium lg:hidden block"
+                >Ру</span
+              >
+            </div>
+            <img
+              src="./src/assets/images/Icon/chevron-down.svg"
+              alt="chevron-down"
+            />
+            <div
+              class="language-dropdown absolute z-50 bg-white border border-gray-300 rounded-md mt-8 left-2 py-2 px-4 w-48"
+            >
+              <div class="language-box flex gap-x-2 p-3">
+                <img
+                  class="w-6 h-6"
+                  src="./src/assets/images/Icon/language.svg"
+                  alt="language"
+                />
+                <span
+                  class="change-language text-sm font-medium md:block hidden"
+                  >Русский</span
+                >
+                <span class="text-xs font-medium md:hidden block">Ру</span>
+              </div>
+
+              <div class="language-box flex gap-x-2 p-3">
+                <img
+                  class="w-6 h-6"
+                  src="./src/assets/images/Icon/language2.svg"
+                  alt="language"
+                />
+                <span
+                  class="change-language text-sm font-medium md:block hidden"
+                  >O'zbekcha</span
+                >
+                <span class="text-xs font-medium md:hidden block">O'z</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call Phone -->
+        <div class="">
+          <a href="+998 88 500 50 00" class="lg:flex gap-x-1 hidden">
+            <img src="./src/assets/images/Icon/phone.svg" alt="phone" />
+            <p class="text-sm font-medium">+998 88 500 50 00</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div
+        class="sm:px-4 sm:py-3.5 px-3 py-3 rounded-b-[20px] bg-white backdrop-blur"
+      >
+        <img
+          class="sm:w-full w-[92px]"
+          src="./src/assets/images/Icon/logo.png"
+          alt="logo"
+        />
+      </div>
+
+      <!-- Login -->
+      <div class="sm:mt-5 mt-4">
+        <ul class="flex items-center sm:gap-x-4 gap-x-3">
+          <li class="cursor-pointer">
+            <a
+              class="flex gap-2 items-center"
+              href="./src/pages/create-an-ad.html"
+              ><img
+                class="p-1.5 sm:p-0 bg-gray-grey1 sm:bg-white rounded-lg"
+                src="./src/assets/images/Icon/heart.svg"
+                alt="heart"
+              />
+              <p class="text-sm font-semibold md:block hidden">Избранные</p></a
+            >
+          </li>
+
+          <li class="sm:block hidden">
+            <div class="w-px h-8 bg-gray-grey1"></div>
+          </li>
+
+          <li
+            class="cursor-pointer sm:px-6 sm:py-2.5 px-1.5 py-1.5 rounded-lg bg-gray-grey4 flex gap-2 modal-show"
+          >
+            <p class="text-sm font-semibold md:block hidden">Войти</p>
+            <img
+              class="bg-gray-grey1 sm:bg-white rounded-lg"
+              src="./src/assets/images/Icon/login.svg"
+              alt="login"
+            />
+          </li>
+        </ul>
+
+        <!-- Login Modal -->
+        <div class="w-full hidden login-modal">
+          <div
+            class="fixed top-0 left-0 flex items-center justify-center w-full h-screen overflow-hidden bg-backgroundCol"
+          >
+            <div class="bg-white max-w-[379px] p-5 rounded-xl">
+              <div class="flex justify-between">
+                <h1 class="text-2xl font-bold">Добро пожаловать!</h1>
+                <button class="close-modal">
+                  <img src="./public/images/Icon/exit.svg" alt="exit" />
+                </button>
+              </div>
+              <p class="mt-2 text-sm text-gray-grey6 font-medium">
+                Войти в систему чтобы торговать в системе
+              </p>
+              <form class="mt-7 form-user" action="">
+                <label
+                  class="text-sm font-medium text-gray-grey3 flex flex-col"
+                  for=""
+                >
+                  Логин
+                  <input
+                    class="text-sm font-normal p-3 rounded-lg bg-gray-grey1 mt-2 login focus:bg-white focus:border focus:border-blue-mainBlue"
+                    type="number"
+                    placeholder="Введите логин"
+                  />
+                </label>
+                <label
+                  class="text-sm font-medium text-gray-grey3 flex flex-col mt-4 relative"
+                  for=""
+                >
+                  Пароль
+                  <input
+                    class="text-sm font-normal p-3 rounded-lg bg-gray-grey1 mt-2 password focus:bg-white focus:border focus:border-blue-mainBlue"
+                    type="password"
+                    placeholder="Введите пароль"
+                  />
+                  <button type="button" class="absolute right-2.5 bottom-2.5">
+                    <img
+                      src="./public/images/Icon/eye-closed.svg"
+                      alt="eye-closed"
+                    />
+                  </button>
+                </label>
+                <a class="text-blue-mainBlue text-xs mt-2" href="#"
+                  >Забыли пароль?</a
+                >
+                <button
+                  class="w-full text-base font-semibold py-3 bg-blue-mainBlue text-white rounded-lg mt-16 handle-click"
+                >
+                  Войти
+                </button>
+              </form>
+              <p class="text-xs text-gray-grey2 my-3 text-center">
+                Хотите стать продавцом?
+              </p>
+              <button
+                class="w-full text-base font-semibold py-3 border border-blue-mainBlue text-blue-mainBlue bg-white rounded-lg"
+              >
+                Подать заявку
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto">
+      <div
+        class="bg-gray-grey1 w-full sm:h-[76px] h-[57px] absolute sm:top-20 top-14 z-0"
+      ></div>
+
+      <!-- search -->
+
+      <section class="flex justify-center w-full">
+        <form
+          class="bg-white flex justify-between z-40 sm:mt-6 mt-3 !border !border-gray-grey4 p-2 rounded-lg sm:w-[580px] w-10/12"
+        >
+          <div class="relative w-full flex items-center gap-2">
+            <img
+              class="w-6 h-6"
+              src="./src/assets/images/Icon/search.svg"
+              alt="search"
+            />
+            <input
+              class="outline-none w-full search-input"
+              type="text"
+              placeholder="Что вы ищите?"
+            />
+          </div>
+          <button
+            class="text-base font-bold text-white py-3 px-7 bg-black rounded-md"
+          >
+            Поиск
+          </button>
+        </form>
+        <div class="fixed w-full h-screen inset-0 z-50 hidden modal-box">
+          <div
+            class="bg-backgroundCol w-full h-full flex items-center justify-center rounded-lg shadow-lg p-8 relative modal"
+          >
+            <form
+              class="bg-white flex justify-between absolute top-[125px] z-50 border border-blue-activeBlue p-2 rounded-lg sm:w-[580px] w-10/12"
+            >
+              <div class="relative w-full flex items-center gap-2">
+                <img
+                  class="w-6 h-6"
+                  src="./src/assets/images/Icon/search.svg"
+                  alt="search"
+                />
+                <input
+                  class="outline-none w-full search"
+                  type="text"
+                  placeholder="Что вы ищите?"
+                />
+              </div>
+              <button
+                class="text-base font-bold text-white py-3 px-7 bg-black rounded-md"
+              >
+                Поиск
+              </button>
+            </form>
+            <div
+              class="bg-white sm:w-[580px] max-h-[500px] overflow-hidden overflow-y-auto w-10/12 rounded-lg top-[198px] absolute z-50 px-4"
+              id="search-container"
+            >
+              <p class="text-sm font-medium text-gray-grey2 py-3">
+                История поиска
+              </p>
+              <div id="search-results"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category -->
+
+      <section class="text-center mt-6">
+        <div class="">
+          <h1 class="text-[32px] font-bold text-black">Категории</h1>
+          <p class="text-base text-gray-600">
+            Вы можете найти все категории, которые вам нужны от покупателя
+          </p>
+        </div>
+        <section
+          class="categories lg:px-32 md:px-14 px-4 pl-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[72px] gap-y-5 pt-20"
+        >
+          <div
+            class="subcategories-dropdown hidden col-span-3 rounded-xl border border-grey-4 bg-white p-5 grid-cols-3 gap-x-6 gap-y-3 -translate-x-8 w-[calc(100%+32px)]"
+          ></div>
+        </section>
+      </section>
+
+      <!-- Ads -->
+      <section
+        class="mt-9 md:py-16 sm:py-12 py-8 bg-gray-200 flex justify-center items-center lg:px-32 md:px-14 px-4"
+      >
+        <div class="">
+          <div class="text-center">
+            <h1 class="sm:text-[32px] text-[28px] font-bold text-black">
+              Объявления
+            </h1>
+            <p class="sm:text-base text-sm text-gray-600">
+              Вы можете найти все категории, которые вам нужны от покупателя
+            </p>
+          </div>
+          <div
+            class="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 mt-10 gap-6 ads-container"
+          ></div>
+
+          <!-- Download -->
+          <div
+            class="flex justify-center items-center w-full my-10 sm:pb-0 pb-6"
+          >
+            <button
+              class="flex items-center gap-2 py-3 px-7 text-base font-semibold rounded-[100px] border-2 border-gray-500 bg-gray-300"
+            >
+              Загрузить больше
+              <img
+                src="./src/assets/images/Icon/chevron-double-down.svg"
+                alt="chevron"
+              />
+            </button>
+          </div>
+          <div class="flex justify-center relative shadow-logoShadow">
+            <img
+              class="absolute sm:-bottom-24 -bottom-16"
+              src="./src/assets/images/Icon/logo.png"
+              alt="logo"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer  -->
+    <footer class="w-full flex flex-col justify-center items-center px-4">
+      <div class="border-b border-gray-300 w-full">
+        <div
+          class="bg-footerImg bg-cover bg-center flex justify-center flex-col items-center text-center"
+        >
+          <p class="mt-[63px] sm:text-base text-sm sm:w-7/12 w-11/12">
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <div
+            class="mt-6 flex justify-center flex-wrap gap-x-14 gap-y-4 pb-10 sm:text-xl text-sm"
+          >
+            <div class="flex items-center gap-1">
+              <img src="./src/assets/images/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">Доска объявлений</h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="./src/assets/images/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">Условия пользования</h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="./src/assets/images/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">+998 88 500 50 00</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between sm:px-32 px-4 w-full py-2">
+        <div class="flex items-center gap-2.5">
+          <a href="#!">© 77.uz</a>
+          <p>2023. Все права защищены</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="./src/assets/images/Icon/uic.svg" alt="uic" />
+          <img
+            class="sm:block hidden"
+            src="./src/assets/images/Icon/group.svg"
+            alt="group"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="./src/service/login.js"></script>
+  </body>
+</html>

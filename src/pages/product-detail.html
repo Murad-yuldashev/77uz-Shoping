@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/Icon/logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="flex justify-between md:px-32 sm:px-14 px-4 items-center bg-opacity_white backdrop-blur relative"
+    >
+      <div class="flex gap-6 items-center">
+        <div class="relative">
+          <select
+            class="block appearance-none bg-white border border-gray-300 rounded-md py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          >
+            <option>
+              <span>Русский</span>
+              <img src="../assets/images/Icon/language.svg" alt="language" />
+            </option>
+            <option>Spanish</option>
+            <option>French</option>
+          </select>
+        </div>
+        <div class="gap-1 items-center sm:flex hidden">
+          <img src="../assets/images/Icon/phone.svg" alt="phone" />
+          <p class="text-xs">+998 88 500 50 00</p>
+        </div>
+      </div>
+      <div class="px-8">
+        <img
+          class="py-3.5 px-4 sm:w-full w-[92px]"
+          src="../assets/images/Icon/logo.png"
+          alt="logo"
+        />
+      </div>
+      <div class="">
+        <ul class="flex items-center sm:gap-x-4 gap-x-0">
+          <li>
+            <a class="flex gap-2" href=""
+              ><img
+                class="p-2.5 sm:p-0 bg-gray-200 sm:bg-white rounded-lg"
+                src="../assets/images/Icon/heart.svg"
+                alt="heart"
+              />
+              <p class="md:block hidden">Избранные</p></a
+            >
+          </li>
+          <li class="sm:block hidden">
+            <div class="w-px h-8 bg-light_gray"></div>
+          </li>
+          <li>
+            <a class="flex gap-2 px-6 bg-grays" href="">
+              <p class="md:block hidden">Войти</p>
+              <img
+                class="p-2.5 sm:p-0 bg-gray-200 sm:bg-white rounded-lg"
+                src="../assets/images/Icon/login.svg"
+                alt="login"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="bg-gray-100 md:px-32 sm:px-14 px-4">
+      <!-- Direction -->
+      <section class="flex items-center rounded-full text-sm py-8 gap-1.5">
+        <p>Главная</p>
+        <div class="w-1 h-1 bg-gray-400"></div>
+        <p class="text-gray-500">Рестораны и кафе</p>
+      </section>
+
+      <!--  -->
+      <section class="flex gap-x-6 pb-[60px]">
+        <!-- aside -->
+        <aside class="sm:block hidden">
+          <div class="w-full max-w-[278px]">
+            <form class="bg-white shadow-md rounded-xl p-4 pb-8 mb-4">
+              <h2 class="mb-4 text-xl font-semibold">Фильтр</h2>
+              <div class="">
+                <p class="text-sm text-gray-600 font-medium">Регион</p>
+                <select
+                  class="mt-2 block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                >
+                  <option>Самаркандская область</option>
+                  <option>Бухарская область</option>
+                  <option>Ташкент</option>
+                </select>
+              </div>
+              <div class="mt-5">
+                <p class="text-sm text-gray-600 font-medium">Район/город</p>
+                <select
+                  class="mt-2 block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                >
+                  <option>Все</option>
+                  <!-- <option>Бухарская область</option>
+                    <option>Ташкент</option> -->
+                </select>
+              </div>
+              <div class="mt-5">
+                <label class="text-gray-600 text-sm font-medium" for="username">
+                  Сортировать
+                </label>
+                <div class="flex flex-col items-start mb-2">
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="radio"
+                      class="form-radio"
+                      name="color"
+                      value="red"
+                    />
+                    <span class="ml-2 text-sm font-medium">Дешёвые сперва</span>
+                  </label>
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="radio"
+                      class="form-radio"
+                      name="color"
+                      value="blue"
+                    />
+                    <span class="ml-2 text-sm font-medium">Дорогие сперва</span>
+                  </label>
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="radio"
+                      class="form-radio"
+                      name="color"
+                      value="green"
+                    />
+                    <span class="ml-2 text-sm font-medium">Новые сперва</span>
+                  </label>
+                </div>
+              </div>
+              <div class="mb-5">
+                <label class="text-gray-600 text-sm font-medium" for="username">
+                  Подкатегории
+                </label>
+                <div class="mt-1 flex flex-col">
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox"
+                      name="fruits[]"
+                      value="apple"
+                    />
+                    <span class="ml-2 text-sm font-medium">Все разделы</span>
+                  </label>
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox"
+                      name="fruits[]"
+                      value="apple"
+                    />
+                    <span class="ml-2 text-sm font-medium">Парфюмерия</span>
+                  </label>
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox"
+                      name="fruits[]"
+                      value="apple"
+                    />
+                    <span class="ml-2 text-sm font-medium"
+                      >Ноутбуки и планшеты</span
+                    >
+                  </label>
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox"
+                      name="fruits[]"
+                      value="apple"
+                    />
+                    <span class="ml-2 text-sm font-medium">Лицо</span>
+                  </label>
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox"
+                      name="fruits[]"
+                      value="apple"
+                    />
+                    <span class="ml-2 text-sm font-medium">Тело и ванна</span>
+                  </label>
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox"
+                      name="fruits[]"
+                      value="apple"
+                    />
+                    <span class="ml-2 text-sm font-medium">Макияж</span>
+                  </label>
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox"
+                      name="fruits[]"
+                      value="apple"
+                    />
+                    <span class="ml-2 text-sm font-medium">Мужчинам</span>
+                  </label>
+                  <label
+                    class="inline-flex items-center py-2.5 border-b border-gray-200"
+                  >
+                    <input
+                      type="checkbox"
+                      class="form-checkbox"
+                      name="fruits[]"
+                      value="apple"
+                    />
+                    <span class="ml-2 text-sm font-medium">Женщинам</span>
+                  </label>
+                  <label class="inline-flex items-center py-2.5">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox"
+                      name="fruits[]"
+                      value="apple"
+                    />
+                    <span class="ml-2 text-sm font-medium">Премиум</span>
+                  </label>
+                </div>
+              </div>
+              <div class="flex w-full items-center justify-center mt-14">
+                <button
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-7 rounded focus:outline-none focus:shadow-outline"
+                  type="submit"
+                >
+                  Применить фильтр
+                </button>
+              </div>
+            </form>
+          </div>
+        </aside>
+
+        <!-- Product Detail -->
+        <div class="w-full flex flex-col items-center relative">
+          <h1 class="text-[32px] font-bold">Ноутбуки и планшеты</h1>
+          <div class="w-full mt-3 flex items-center justify-between">
+            <p class="text-sm font-medium text-gray-500">156 объявлений</p>
+            <div class="flex items-center gap-x-3">
+              <img
+                class="bg-white p-1 sm:hidden block"
+                src="../assets/images/Icon/filter.svg"
+                alt="filter"
+              />
+              <img src="../assets/images/Icon/list.svg" alt="list" />
+              <img src="../assets/images/Icon/box.svg" alt="box" />
+            </div>
+          </div>
+
+          <!-- Product Box -->
+          <div class="grid md:grid-cols-3 grid-cols-2 mt-10 gap-6">
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3 sm:w-10 h-auto w-6"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card1.png"
+                  alt="card"
+                />
+              </div>
+              <div class="md:p-5 p-2">
+                <p
+                  class="sm:text-sm text-[10px] text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[87px]"
+                >
+                  г. Ташкент
+                </p>
+                <h3
+                  class="font-semibold md:text-lg sm:text-base text-sm sm:mt-4 mt-2"
+                >
+                  Кепки Corneliani Diamond for him edition.
+                </h3>
+                <p class="sm:text-sm text-[10px] text-gray-600 py-2">
+                  Вчера, 19:20
+                </p>
+                <p class="text-gray-600 sm:text-base text-xs font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="sm:text-2xl text-base text-black font-bold">
+                    2 599 000
+                  </p>
+                  <span class="text-blue-500 sm:text-base text-sm font-medium"
+                    >UZS</span
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3 sm:w-10 h-auto w-6"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card2.jpg"
+                  alt="card"
+                />
+              </div>
+              <div class="md:p-5 p-2">
+                <p
+                  class="sm:text-sm text-[10px] text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[107px]"
+                >
+                  г. Самарканд
+                </p>
+                <h3
+                  class="font-semibold md:text-lg sm:text-base text-sm sm:mt-4 mt-2"
+                >
+                  Chevrolet Onix 1.2 Turbo в наличии
+                </h3>
+                <p class="sm:text-sm text-[10px] text-gray-600 py-2">
+                  Вчера, 19:20
+                </p>
+                <p class="text-gray-600 sm:text-base text-xs font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="sm:text-2xl text-base text-black font-bold">
+                    204 000 000
+                  </p>
+                  <span class="text-blue-500 sm:text-base text-sm font-medium"
+                    >UZS</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3 sm:w-10 h-auto w-6"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card3.jpg"
+                  alt="card"
+                />
+              </div>
+              <div class="md:p-5 p-2">
+                <p
+                  class="sm:text-sm text-[10px] text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[107px]"
+                >
+                  г. Ташкент
+                </p>
+                <h3
+                  class="font-semibold md:text-lg sm:text-base text-sm sm:mt-4 mt-2"
+                >
+                  Кепки Corneliani Diamond for him edition.
+                </h3>
+                <p class="sm:text-sm text-[10px] text-gray-600 py-2">
+                  Вчера, 19:20
+                </p>
+                <p class="text-gray-600 sm:text-base text-xs font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="sm:text-2xl text-base text-black font-bold">
+                    2 599 000
+                  </p>
+                  <span class="text-blue-500 sm:text-base text-sm font-medium"
+                    >UZS</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3 sm:w-10 h-auto w-6"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card4.jpg"
+                  alt="card"
+                />
+              </div>
+              <div class="md:p-5 p-2">
+                <p
+                  class="sm:text-sm text-[10px] text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[107px]"
+                >
+                  г. Ташкент
+                </p>
+                <h3
+                  class="font-semibold md:text-lg sm:text-base text-sm sm:mt-4 mt-2"
+                >
+                  г. Ташкент Оригинальные кроссовки Nike Air Max Plus
+                </h3>
+                <p class="sm:text-sm text-[10px] text-gray-600 py-2">
+                  Вчера, 19:20
+                </p>
+                <p class="text-gray-600 sm:text-base text-xs font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="sm:text-2xl text-base text-black font-bold">
+                    2 599 000
+                  </p>
+                  <span class="text-blue-500 sm:text-base text-sm font-medium"
+                    >UZS</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3 sm:w-10 h-auto w-6"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card1.png"
+                  alt="card"
+                />
+              </div>
+              <div class="md:p-5 p-2">
+                <p
+                  class="sm:text-sm text-[10px] text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[107px]"
+                >
+                  г. Самарканд
+                </p>
+                <h3
+                  class="font-semibold md:text-lg sm:text-base text-sm sm:mt-4 mt-2"
+                >
+                  Кепки Corneliani Diamond for him edition.
+                </h3>
+                <p class="sm:text-sm text-[10px] text-gray-600 py-2">
+                  Вчера, 19:20
+                </p>
+                <p class="text-gray-600 sm:text-base text-xs font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="sm:text-2xl text-base text-black font-bold">
+                    2 599 000
+                  </p>
+                  <span class="text-blue-500 sm:text-base text-sm font-medium"
+                    >UZS</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3 sm:w-10 h-auto w-6"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card2.jpg"
+                  alt="card"
+                />
+              </div>
+              <div class="md:p-5 p-2">
+                <p
+                  class="sm:text-sm text-[10px] text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[107px]"
+                >
+                  г. Самарканд
+                </p>
+                <h3
+                  class="font-semibold md:text-lg sm:text-base text-sm sm:mt-4 mt-2"
+                >
+                  Chevrolet Onix 1.2 Turbo в наличии
+                </h3>
+                <p class="sm:text-sm text-[10px] text-gray-600 py-2">
+                  Вчера, 19:20
+                </p>
+                <p class="text-gray-600 sm:text-base text-xs font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="sm:text-2xl text-base text-black font-bold">
+                    204 000 000
+                  </p>
+                  <span class="text-blue-500 sm:text-base text-sm font-medium"
+                    >UZS</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card3.jpg"
+                  alt="card"
+                />
+              </div>
+              <div class="p-5">
+                <p
+                  class="text-sm text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[87px]"
+                >
+                  г. Ташкент
+                </p>
+                <h3 class="font-semibold text-lg mt-4">
+                  Кепки Corneliani Diamond for him edition.
+                </h3>
+                <p class="text-sm text-gray-600 py-2">Вчера, 19:20</p>
+                <p class="text-gray-600 text-base font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="text-2xl text-black font-bold">2 599 000</p>
+                  <span class="text-blue-500 font-medium">UZS</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card4.jpg"
+                  alt="card"
+                />
+              </div>
+              <div class="p-5">
+                <p
+                  class="text-sm text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[87px]"
+                >
+                  г. Ташкент
+                </p>
+                <h3 class="font-semibold text-lg mt-4">
+                  г. Ташкент Оригинальные кроссовки Nike Air Max Plus
+                </h3>
+                <p class="text-sm text-gray-600 py-2">Вчера, 19:20</p>
+                <p class="text-gray-600 text-base font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="text-2xl text-black font-bold">2 599 000</p>
+                  <span class="text-blue-500 font-medium">UZS</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card1.png"
+                  alt="card"
+                />
+              </div>
+              <div class="p-5">
+                <p
+                  class="text-sm text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[87px]"
+                >
+                  г. Ташкент
+                </p>
+                <h3 class="font-semibold text-lg mt-4">
+                  Кепки Corneliani Diamond for him edition.
+                </h3>
+                <p class="text-sm text-gray-600 py-2">Вчера, 19:20</p>
+                <p class="text-gray-600 text-base font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="text-2xl text-black font-bold">2 599 000</p>
+                  <span class="text-blue-500 font-medium">UZS</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card2.jpg"
+                  alt="card"
+                />
+              </div>
+              <div class="p-5">
+                <p
+                  class="text-sm text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[107px]"
+                >
+                  г. Самарканд
+                </p>
+                <h3 class="font-semibold text-lg mt-4">
+                  Chevrolet Onix 1.2 Turbo в наличии
+                </h3>
+                <p class="text-sm text-gray-600 py-2">Вчера, 19:20</p>
+                <p class="text-gray-600 text-base font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="text-2xl text-black font-bold">204 000 000</p>
+                  <span class="text-blue-500 font-medium">UZS</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card3.jpg"
+                  alt="card"
+                />
+              </div>
+              <div class="p-5">
+                <p
+                  class="text-sm text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[87px]"
+                >
+                  г. Ташкент
+                </p>
+                <h3 class="font-semibold text-lg mt-4">
+                  Кепки Corneliani Diamond for him edition.
+                </h3>
+                <p class="text-sm text-gray-600 py-2">Вчера, 19:20</p>
+                <p class="text-gray-600 text-base font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="text-2xl text-black font-bold">2 599 000</p>
+                  <span class="text-blue-500 font-medium">UZS</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- box -->
+            <article
+              class="hover:text-blue-500 cursor-pointer rounded-xl flex flex-col items-center justify-center bg-white"
+            >
+              <div class="w-full relative">
+                <img
+                  class="absolute top-3 left-3"
+                  src="../assets/images/Icon/heart2.svg"
+                  alt="icon"
+                />
+                <img
+                  class="w-full rounded-t-md"
+                  src="../assets/images/Img/card4.jpg"
+                  alt="card"
+                />
+              </div>
+              <div class="p-5">
+                <p
+                  class="text-sm text-gray-600 py-1 px-2 bg-gray-200 rounded-md w-[87px]"
+                >
+                  г. Ташкент
+                </p>
+                <h3 class="font-semibold text-lg mt-4">
+                  г. Ташкент Оригинальные кроссовки Nike Air Max Plus
+                </h3>
+                <p class="text-sm text-gray-600 py-2">Вчера, 19:20</p>
+                <p class="text-gray-600 text-base font-semibold">
+                  +998 71 200 70 07
+                </p>
+                <div class="flex items-center gap-2">
+                  <p class="text-2xl text-black font-bold">2 599 000</p>
+                  <span class="text-blue-500 font-medium">UZS</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <img
+            class="absolute -bottom-24 left-[32%]"
+            src="../assets/images/Icon/logo.svg"
+            alt="logo"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full flex flex-col justify-center items-center px-4">
+      <div class="border-b border-gray-300 w-full">
+        <div
+          class="bg-[url('../assets/images/Img/background.svg')] bg-cover bg-center flex justify-center flex-col items-center text-center"
+        >
+          <p class="mt-[63px] sm:text-base text-sm sm:w-7/12 w-11/12">
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <div
+            class="mt-6 flex justify-center flex-wrap gap-x-14 gap-y-4 pb-10 sm:text-xl text-sm"
+          >
+            <div class="flex items-center gap-1">
+              <img src="../assets/images/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">Доска объявлений</h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="../assets/images/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">Условия пользования</h4>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="../assets/images/Icon/symbol.svg" alt="symbol" />
+              <h4 class="font-semibold">+998 88 500 50 00</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between sm:px-32 px-4 w-full py-2">
+        <div class="flex items-center gap-2.5">
+          <a href="#!">© 77.uz</a>
+          <p>2023. Все права защищены</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="../assets/images/Icon/uic.svg" alt="uic" />
+          <img
+            class="sm:block hidden"
+            src="../assets/images/Icon/group.svg"
+            alt="group"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

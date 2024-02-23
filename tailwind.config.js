@@ -17,6 +17,7 @@ export default {
           grey4: '#EAEDF0',
           grey5: '#D5D8DB',
           grey6: '#8E9297',
+          grey7: 'rgba(17, 124, 245, 0.1)',
         },
         backgroundCol: '#17181A66',
         backgroundCol2: 'rgba(214, 214, 214, 0.5)',
@@ -30,7 +31,8 @@ export default {
         }
       },
       boxShadow: {
-        logoShadow: '0px 4px 36px 0px rgba(56, 143, 243, 0.47)'
+        logoShadow: '0px 4px 36px 0px rgba(56, 143, 243, 0.47)',
+        userShadow: '0px 0px 24px 0px rgba(17, 124, 245, 0.2)',
       },
       backgroundImage: {
         footerImg: `url("./public/images/Img/backgroundImg.svg")`

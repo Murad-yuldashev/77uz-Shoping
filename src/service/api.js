@@ -2,21 +2,24 @@ const BASE_URL = "https://77-dev.uicgroup.tech/api/v1";
 
 const token = localStorage.getItem("access");
 
-const service = (method, url, data, params) => {
+const service = (method, url, data, params, bearer = false) => {
   const headers = {
     "Content-Type": "application/json",
   };
 
-  if (token) {
+  if (token && bearer) {
     headers.Authorization = `Bearer ${token}`;
   }
-
+  // return fetch(BASE_URL + url + new URLSearchParams(params), {
+  //   method,
+  //   headers,
+  //   body: data,
+  // });
   return new Promise((resolve, reject) => {
-    fetch(BASE_URL + url, {
+    fetch(BASE_URL + url + new URLSearchParams(params), {
       method,
       headers,
       body: JSON.stringify(data),
-      params,
     })
       .then((res) => res.json())
       .then((res) => {
@@ -31,7 +34,7 @@ const service = (method, url, data, params) => {
 
 export default {
   get(url, params) {
-    return service("GET", url, params);
+    return service("GET", url, {}, params);
   },
   post(url, data, params) {
     return service("POST", url, data, params);

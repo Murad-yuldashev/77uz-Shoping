@@ -1,3 +1,3 @@
 export function isValid(login, password) {
-    return login.length === 12 && password.length >= 8
+    return login.length >= 5 && password.length >= 8
 }

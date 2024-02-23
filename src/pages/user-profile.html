@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil</title>
     <link
       rel="shortcut icon"
-      href="./src/assets/images/Icon/logo.svg"
+      href="/public/assets/images/Icon/logo.svg"
       type="image/x-icon"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/assets/styles/main.css" />
-    <title>77uz Shoping</title>
+    <link rel="stylesheet" href="../../src/assets/styles/main.css" />
   </head>
   <body>
     <!-- Header -->
@@ -25,7 +25,7 @@
             <div class="bg-white flex items-center gap-1 justify-between">
               <img
                 class="selected-img w-6 h-6"
-                src="./src/assets/images/Icon/language.svg"
+                src="../assets/images/Icon/language.svg"
                 alt="language"
               />
               <span
@@ -38,7 +38,7 @@
               >
             </div>
             <img
-              src="./src/assets/images/Icon/chevron-down.svg"
+              src="../assets/images/Icon/chevron-down.svg"
               alt="chevron-down"
             />
             <div
@@ -47,7 +47,7 @@
               <div class="language-box flex gap-x-2 p-3">
                 <img
                   class="w-6 h-6"
-                  src="./src/assets/images/Icon/language.svg"
+                  src="../assets/images/Icon/language.svg"
                   alt="language"
                 />
                 <span
@@ -60,7 +60,7 @@
               <div class="language-box flex gap-x-2 p-3">
                 <img
                   class="w-6 h-6"
-                  src="./src/assets/images/Icon/language2.svg"
+                  src="../assets/images/Icon/language2.svg"
                   alt="language"
                 />
                 <span
@@ -76,7 +76,7 @@
         <!-- Call Phone -->
         <div class="">
           <a href="+998 88 500 50 00" class="lg:flex gap-x-1 hidden">
-            <img src="./src/assets/images/Icon/phone.svg" alt="phone" />
+            <img src="../assets/images/Icon/phone.svg" alt="phone" />
             <p class="text-sm font-medium">+998 88 500 50 00</p>
           </a>
         </div>
@@ -88,7 +88,7 @@
       >
         <img
           class="sm:w-full w-[92px]"
-          src="./src/assets/images/Icon/logo.png"
+          src="../assets/images/Icon/logo.png"
           alt="logo"
         />
       </div>
@@ -102,7 +102,7 @@
               href="./src/pages/create-an-ad.html"
               ><img
                 class="p-1.5 sm:p-0 bg-gray-grey1 sm:bg-white rounded-lg"
-                src="./src/assets/images/Icon/heart.svg"
+                src="../assets/images/Icon/heart.svg"
                 alt="heart"
               />
               <p class="text-sm font-semibold md:block hidden">Избранные</p></a
@@ -120,7 +120,7 @@
               <p class="text-sm font-semibold md:block hidden">Войти</p>
               <img
                 class="bg-gray-grey1 sm:bg-white rounded-lg"
-                src="./src/assets/images/Icon/login.svg"
+                src="../assets/images/Icon/login.svg"
                 alt="login"
               />
             </div>
@@ -128,7 +128,10 @@
           <button
             class="cursor-pointer sm:px-1 sm:py-1 px-1.5 py-1.5 rounded-lg bg-gray-grey4 hidden modal-avatar-show"
           >
-            <a href="./src/pages/user-profile.html" class="flex gap-2 items-center">
+            <a
+              href="./src/pages/user-profile.html"
+              class="flex gap-2 items-center"
+            >
               <img
                 class="bg-gray-grey1 sm:bg-white w-[30px] h-[30px] rounded-full"
                 src="/public/images/Icon/avatar.jpg"
@@ -154,7 +157,7 @@
               <div class="flex justify-between">
                 <h1 class="text-2xl font-bold">Добро пожаловать!</h1>
                 <button class="close-modal">
-                  <img src="./public/images/Icon/exit.svg" alt="exit" />
+                  <img src="/public/images/Icon/exit.svg" alt="exit" />
                 </button>
               </div>
               <p class="mt-2 text-sm text-gray-grey6 font-medium">
@@ -188,7 +191,7 @@
                     class="absolute right-2.5 bottom-2.5 password-show"
                   >
                     <img
-                      src="./public/images/Icon/eye-closed.svg"
+                      src="/public/images/Icon/eye-closed.svg"
                       alt="eye-closed"
                     />
                   </button>
@@ -223,7 +226,7 @@
               <div class="flex justify-between">
                 <h1 class="text-2xl font-bold">Подать заявку</h1>
                 <button class="application-close">
-                  <img src="./public/images/Icon/exit.svg" alt="exit" />
+                  <img src="/public/images/Icon/exit.svg" alt="exit" />
                 </button>
               </div>
               <p class="mt-2 text-sm text-gray-grey6 font-medium">
@@ -272,7 +275,7 @@
                   </select>
                   <button type="button" class="absolute right-2.5 bottom-2.5">
                     <img
-                      src="./public/images/Icon/chevron-down-gray.svg"
+                      src="/public/images/Icon/chevron-down-gray.svg"
                       alt="eye-closed"
                     />
                   </button>
@@ -309,130 +312,93 @@
       </div>
     </header>
 
-    <main class="mx-auto">
-      <div
-        class="bg-gray-grey1 w-full sm:h-[76px] h-[57px] absolute sm:top-20 top-14 z-0"
-      ></div>
+    <main class="bg-gray-100 lg:px-32 md:px-14 px-4">
+      <section class="flex items-center rounded-full text-sm py-8 gap-1.5">
+        <p>Главная</p>
+        <div class="w-1 h-1 bg-gray-400"></div>
+        <p class="text-gray-500">Профиль</p>
+      </section>
 
-      <!-- search -->
-
-      <section class="flex justify-center w-full">
-        <form
-          class="bg-white flex justify-between z-40 sm:mt-6 mt-3 !border !border-gray-grey4 p-2 rounded-lg sm:w-[580px] w-10/12"
-        >
-          <div class="relative w-full flex items-center gap-2">
-            <img
-              class="w-6 h-6"
-              src="./src/assets/images/Icon/search.svg"
-              alt="search"
-            />
-            <input
-              class="outline-none w-full search-input"
-              type="text"
-              placeholder="Что вы ищите?"
-            />
-          </div>
-          <button
-            class="text-base font-bold text-white py-3 px-7 bg-black rounded-md"
-          >
-            Поиск
-          </button>
-        </form>
-        <div class="fixed w-full h-screen inset-0 z-50 hidden modal-box">
-          <div
-            class="bg-backgroundCol w-full h-full flex items-center justify-center rounded-lg shadow-lg p-8 relative modal"
-          >
-            <form
-              class="bg-white flex justify-between absolute top-[125px] z-50 border border-blue-activeBlue p-2 rounded-lg sm:w-[580px] w-10/12"
-            >
-              <div class="relative w-full flex items-center gap-2">
-                <img
-                  class="w-6 h-6"
-                  src="./src/assets/images/Icon/search.svg"
-                  alt="search"
-                />
-                <input
-                  class="outline-none w-full search"
-                  type="text"
-                  placeholder="Что вы ищите?"
-                />
-              </div>
-              <button
-                class="text-base font-bold text-white py-3 px-7 bg-black rounded-md"
-              >
-                Поиск
-              </button>
-            </form>
+      <section class="flex justify-between gap-x-6 pb-[60px]">
+        <!-- User Profile -->
+        <aside class="w-[21%]">
+          <div class="bg-white p-4 rounded-2xl">
             <div
-              class="bg-white sm:w-[580px] max-h-[500px] overflow-hidden overflow-y-auto w-10/12 rounded-lg top-[198px] absolute z-50 px-4"
-              id="search-container"
+              class="flex items-center gap-x-4 border border-gray-grey4 p-4 rounded-lg"
             >
-              <p class="text-sm font-medium text-gray-grey2 py-3">
-                История поиска
-              </p>
-              <div id="search-results"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Category -->
-
-      <section class="text-center mt-6">
-        <div class="">
-          <h1 class="text-[32px] font-bold text-black">Категории</h1>
-          <p class="text-base text-gray-600">
-            Вы можете найти все категории, которые вам нужны от покупателя
-          </p>
-        </div>
-        <section
-          class="categories lg:px-32 md:px-14 px-4 pl-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[72px] gap-y-5 pt-20"
-        >
-          <div
-            class="subcategories-dropdown hidden col-span-3 rounded-xl border border-grey-4 bg-white p-5 grid-cols-3 gap-x-6 gap-y-3 -translate-x-8 w-[calc(100%+32px)]"
-          ></div>
-        </section>
-      </section>
-
-      <!-- Ads -->
-      <section
-        class="mt-9 md:py-16 sm:py-12 py-8 bg-gray-200 flex justify-center items-center lg:px-32 md:px-14 px-4"
-      >
-        <div class="">
-          <div class="text-center">
-            <h1 class="sm:text-[32px] text-[28px] font-bold text-black">
-              Объявления
-            </h1>
-            <p class="sm:text-base text-sm text-gray-600">
-              Вы можете найти все категории, которые вам нужны от покупателя
-            </p>
-          </div>
-          <div
-            class="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 mt-10 gap-6 ads-container"
-          ></div>
-
-          <!-- Download -->
-          <div
-            class="flex justify-center items-center w-full my-10 sm:pb-0 pb-6"
-          >
-            <button
-              class="flex items-center gap-2 py-3 px-7 text-base font-semibold rounded-[100px] border-2 border-gray-500 bg-gray-300"
-            >
-              Загрузить больше
               <img
-                src="./src/assets/images/Icon/chevron-double-down.svg"
-                alt="chevron"
+                class="w-[54px] h-[54px] rounded-full"
+                src="../../public/images/Icon/avatar.jpg"
+                alt="avatar"
               />
+              <div class="">
+                <p class="font-bold">
+                  Шохрух <br />
+                  Шавкиев
+                </p>
+              </div>
+            </div>
+            <div class="w-full h-px bg-gray-grey4 my-4"></div>
+
+            <div
+              class="flex items-center gap-x-2 border border-gray-grey7 rounded-lg py-2.5 px-3 shadow-userShadow"
+            >
+              <img
+                class="w-6 h-6"
+                src="/public/images/Icon/menu-box.svg"
+                alt="menu-box"
+              />
+              <p class="text-sm font-semibold">Мои объявления</p>
+            </div>
+            <button
+              class="w-full mt-3 flex items-center gap-x-2 bg-gray-grey1 border border-gray-grey7 rounded-lg py-2.5 px-3"
+            >
+              <img
+                src="/public/images/Icon/user-profile-circle.svg"
+                alt="profile-circle"
+              />
+              <span class="text-sm font-semibold">Персональные данные</span>
+            </button>
+            
+            <div class="w-full h-px bg-gray-grey4 my-4"></div>
+            
+            <button
+              class="w-full mt-3 flex items-center justify-center gap-x-2 bg-gray-grey1 border border-gray-grey7 rounded-lg py-2.5 px-3"
+            >
+              <img
+                src="/public/images/Icon/logout-user.svg"
+                alt="profile-circle"
+              />
+              <span class="text-sm font-semibold">Выход</span>
+            </button>
+
+          </div>
+        </aside>
+
+        <!-- User Products -->
+        <section class="w-[79%] flex flex-col items-center relative">
+          <div class="w-full flex items-center justify-between">
+            <h1 class="text-[32px] font-bold">Мои объявления</h1>
+            <button
+              class="flex items-center gap-x-3 text-sm font-semibold text-white py-2.5 px-6 bg-blue-mainBlue rounded-lg"
+            >
+              <span>Создать объявление</span>
+              <img src="/public/images/Icon/plus.svg" alt="add" />
             </button>
           </div>
-          <div class="flex justify-center relative shadow-logoShadow">
-            <img
-              class="absolute sm:-bottom-24 -bottom-16"
-              src="./src/assets/images/Icon/logo.png"
-              alt="logo"
-            />
-          </div>
-        </div>
+
+          <!-- Product Box -->
+
+          <div
+            class="grid xl:grid-cols-3 grid-cols-2 mt-6 gap-6 ads-container Product"
+          ></div>
+
+          <img
+            class="absolute -bottom-24 left-[32%]"
+            src="../assets/images/Icon/logo.svg"
+            alt="logo"
+          />
+        </section>
       </section>
     </main>
 
@@ -451,15 +417,15 @@
             class="mt-6 flex justify-center flex-wrap gap-x-14 gap-y-4 pb-10 sm:text-xl text-sm"
           >
             <div class="flex items-center gap-1">
-              <img src="./src/assets/images/Icon/symbol.svg" alt="symbol" />
+              <img src="../assets/images/Icon/symbol.svg" alt="symbol" />
               <h4 class="font-semibold">Доска объявлений</h4>
             </div>
             <div class="flex items-center gap-1">
-              <img src="./src/assets/images/Icon/symbol.svg" alt="symbol" />
+              <img src="../assets/images/Icon/symbol.svg" alt="symbol" />
               <h4 class="font-semibold">Условия пользования</h4>
             </div>
             <div class="flex items-center gap-1">
-              <img src="./src/assets/images/Icon/symbol.svg" alt="symbol" />
+              <img src="../assets/images/Icon/symbol.svg" alt="symbol" />
               <h4 class="font-semibold">+998 88 500 50 00</h4>
             </div>
           </div>
@@ -472,18 +438,18 @@
           <p>2023. Все права защищены</p>
         </div>
         <div class="flex items-center gap-2">
-          <img src="./src/assets/images/Icon/uic.svg" alt="uic" />
+          <img src="../assets/images/Icon/uic.svg" alt="uic" />
           <img
             class="sm:block hidden"
-            src="./src/assets/images/Icon/group.svg"
+            src="../assets/images/Icon/group.svg"
             alt="group"
           />
         </div>
       </div>
     </footer>
 
-    <script type="module" src="./src/js/main.js"></script>
-    <script type="module" src="./src/modules/ads-container.js"></script>
-    <script type="module" src="./src/service/login.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../service/login.js"></script>
+    <script type="module" src="../modules/user-create-product.js"></script>
   </body>
 </html>

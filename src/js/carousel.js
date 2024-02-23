@@ -30,11 +30,11 @@ carouselData.forEach((carousel) => {
   carouselBoxHead.insertAdjacentHTML('beforeend', carouselHead);
 });
 
-carouselData.forEach((carousel) => {
-  let carouselBody = `<div class="swiper-slide">
-                        <img src=${carousel.img} />
-                      </div>`;
+// carouselData.forEach((carousel) => {
+//   let carouselBody = `<div class="swiper-slide">
+//                         <img src=${carousel.img} />
+//                       </div>`;
 
-  carouselBoxBody.insertAdjacentHTML(carouselBody);
-});
-console.log(carouselData);
+//   carouselBoxBody.insertAdjacentHTML("beforeend", carouselBody);
+// });
+// console.log(carouselData);
